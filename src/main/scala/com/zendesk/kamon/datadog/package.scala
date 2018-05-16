@@ -1,10 +1,9 @@
-package kamon
+package com.zendesk.kamon
 
 import kamon.metric.MeasurementUnit
 import kamon.metric.MeasurementUnit.{ information, time }
 
 package object datadog {
-
   def readTimeUnit(unit: String): MeasurementUnit = unit match {
     case "s"   => time.seconds
     case "ms"  => time.milliseconds

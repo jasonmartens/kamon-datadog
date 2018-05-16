@@ -14,13 +14,13 @@
  * =========================================================================================
  */
 
-package kamon.datadog
+package com.zendesk.kamon.datadog
 
 import java.time.Instant
 
 import com.typesafe.config.{ Config, ConfigFactory }
 import kamon.Kamon
-import kamon.datadog.DatadogAgentReporter.PacketBuffer
+import com.zendesk.kamon.datadog.DatadogAgentReporter.PacketBuffer
 import kamon.metric._
 import kamon.testkit.Reconfigure
 import org.scalatest.{ Matchers, WordSpec }

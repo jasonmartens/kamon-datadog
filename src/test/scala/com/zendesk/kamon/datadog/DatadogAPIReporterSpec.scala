@@ -1,4 +1,4 @@
-package kamon.datadog
+package com.zendesk.kamon.datadog
 
 import java.time.Instant
 

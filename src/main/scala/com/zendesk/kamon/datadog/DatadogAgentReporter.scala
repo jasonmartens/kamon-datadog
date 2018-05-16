@@ -14,7 +14,7 @@
  * =========================================================================================
  */
 
-package kamon.datadog
+package com.zendesk.kamon.datadog
 
 import java.net.InetSocketAddress
 import java.nio.ByteBuffer

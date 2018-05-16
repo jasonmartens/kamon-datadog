@@ -14,7 +14,7 @@
  * =========================================================================================
  */
 
-package kamon.datadog
+package com.zendesk.kamon.datadog
 
 import java.lang.StringBuilder
 import java.text.{ DecimalFormat, DecimalFormatSymbols }
@@ -23,10 +23,8 @@ import java.util.Locale
 import java.util.concurrent.TimeUnit
 
 import com.typesafe.config.Config
-import kamon.metric._
-import kamon.metric.MeasurementUnit
 import kamon.metric.MeasurementUnit.Dimension.{ Information, Time }
-import kamon.metric.MeasurementUnit.{ information, time }
+import kamon.metric.{ MeasurementUnit, _ }
 import kamon.util.{ EnvironmentTagBuilder, Matcher }
 import kamon.{ Kamon, MetricReporter }
 import okhttp3.{ MediaType, OkHttpClient, Request, RequestBody }

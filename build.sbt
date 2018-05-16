@@ -21,8 +21,11 @@ val kamonTestKit      = "io.kamon"               %% "kamon-testkit"       % "1.1
 val asyncHttpClient   = "com.squareup.okhttp3"    % "okhttp"              % "3.10.0"
 
 lazy val root = (project in file("."))
-  .settings(name := "kamon-datadog")
+  .settings(name := "zendesk-kamon-datadog")
   .settings(
+    buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion),
+    buildInfoPackage := "com.zendesk.kamon",
+    publishTo := Some(sbt.Resolver.url("libs-infra-releases-local", sbt.url("https://zdrepo.jfrog.io/zdrepo/libs-infra-releases-local"))(Resolver.mavenStylePatterns)),
     libraryDependencies ++=
       compileScope(kamonCore, asyncHttpClient, scalaCompact.value) ++
         testScope(scalatest, slf4jApi, slf4jnop, kamonCore, kamonTestKit),
